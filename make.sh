@@ -21,7 +21,7 @@ error() {
 }
 
 generate(){
-    sed -e "s|VMDIR|$VMDIR|g" -e "s|MACHINE|$MACHINE|g" tools/template.xml.in > $OUT
+    sed -e "s|VMDIR|$VMDIR|g" -e "s|MACHINE|$MACHINE|g" "$(cd "$(dirname "$0")"; pwd)/tools/template.xml.in" > $OUT
     echo "$OUT has been generated in $VMDIR"
 }
 

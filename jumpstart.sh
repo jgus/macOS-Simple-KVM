@@ -3,7 +3,7 @@
 # jumpstart.sh: Fetches BaseSystem and converts it to a viable format.
 # by Foxlet <foxlet@furcode.co>
 
-TOOLS=$PWD/tools
+TOOLS="$(cd "$(dirname "$0")"; pwd)/tools"
 
 print_usage() {
     echo
